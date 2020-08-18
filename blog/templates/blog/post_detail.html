@@ -7,8 +7,7 @@
                  {{ post.published_date }}
             </div>
         {% else %}
-        <a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
-        
+            <a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}">Post</a>
         {% endif %}
 
         {% if user.is_authenticated %}
@@ -21,6 +20,7 @@
     <hr>
 
     {% for comment in post.comments.all %}
+    <a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
         {% if user.is_authenticated or comment.approved_comment %}
         <div class="comment">
             <div class="date">

@@ -1,3 +1,3 @@
-Admin account:
+Admin account is
 Username:mnsq 
 Password:lebronjames

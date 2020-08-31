@@ -3,6 +3,6 @@ from django.http import HttpResponse
 
 
 def home_page(request):
-    return HttpResponse('<html><title>MNSQ BLOG</title></html>')
+    return render(request, 'home.html')
 
 # Create your views here.
